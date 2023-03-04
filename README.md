@@ -8,6 +8,8 @@ This method can be extended into 3D.
 ## Example: 
 The N=25 problem with polyomino-set takes ~ 1 second to solve 
 
+![](LegoBricks2DLayout.png)
+
 ```
 BASE CNF size
 clauses:  31509
@@ -42,7 +44,6 @@ CORE LOOP
  [2 3 3 4 4 1 1 1 1 1 1 1 1 4 4 4 4 4 4 1 1 1 1 4 4]
  [2 2 3 4 4 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1]]
 ```
-![](LegoBricks2DLayout.png)
 
 
 ## Formulate these constrains into a set of clauses and use SAT-Solvers to find the soltion (Many solution exists) 
