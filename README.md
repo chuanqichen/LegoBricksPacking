@@ -1,5 +1,5 @@
 # Lego Brick Stacking in 2D 
-* This one documents a method of stacking irregular shape (such as T ) shape instead of simpler rectange shape. 
+* This one documents a method of stacking polyomino-set / irregular shape (such as T ) shape instead of simpler rectange shape only. 
 * Simpler problem in term of just rectangle bin packing can be found at: https://github.com/solomon-b/greedypacker
 * This method can be extended into 3D. 
 * Further sequence of choosing bricks and stacking in order can be dervied from output of this algorithm. 
