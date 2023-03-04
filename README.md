@@ -47,6 +47,7 @@ CORE LOOP
 
 
 ## Formulate these constrains into a set of clauses and use SAT-Solvers to find the soltion (Many solution exists) 
+* Use following solver: https://github.com/msoos/cryptominisat
 The general approach is creating a decision-problem and transforming it into CNF, which is then solved by highly efficient SAT-solvers (here: cryptominisat; CNF will be in DIMCAS-CNF format), which will be used as black-box solvers (no parameter-tuning!).
 
 As the goal is to optimize the number of filled tiles and we are using a decision-problem, we need an outer-loop, adding a minimum tile-used constraint and try to solve it. If not successful, decrease this number. So in general we are calling the SAT-solver multiple times (from scratch!).
@@ -70,4 +71,5 @@ Then only the core-loop is missing, trying to fill N fields, then N-1 until succ
 ## Reference: 
 * https://en.wikipedia.org/wiki/Packing_problems
 * https://stackoverflow.com/questions/47918792/2d-bin-packing-on-a-grid
+* https://github.com/msoos/cryptominisat
 
