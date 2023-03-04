@@ -1,8 +1,8 @@
-# This is packing problem or covering problem
-* https://en.wikipedia.org/wiki/Packing_problems or covering problem
+## This is packing problem or covering problem
+* https://en.wikipedia.org/wiki/Packing_problems 
 * https://en.wikipedia.org/wiki/Covering_problems
 
-# Formulate these constrains into a set of clauses and use SAT-Solvers to find the soltion (Many solution exists) 
+## Formulate these constrains into a set of clauses and use SAT-Solvers to find the soltion (Many solution exists) 
 The general approach is creating a decision-problem and transforming it into CNF, which is then solved by highly efficient SAT-solvers (here: cryptominisat; CNF will be in DIMCAS-CNF format), which will be used as black-box solvers (no parameter-tuning!).
 
 As the goal is to optimize the number of filled tiles and we are using a decision-problem, we need an outer-loop, adding a minimum tile-used constraint and try to solve it. If not successful, decrease this number. So in general we are calling the SAT-solver multiple times (from scratch!).
@@ -23,7 +23,8 @@ if some field is used: there has to be at least one placement active (poly + x +
 this is a basic logical implication easily formulated as one potentially big logical or
 Then only the core-loop is missing, trying to fill N fields, then N-1 until successful. This is again using the n<=k formulation mentioned earlier.
 
-# Example: 
+## Example: 
+The N=25 problem with polyomino-set takes ~ 1 second to solve 
 
 ```
 BASE CNF size
@@ -59,6 +60,7 @@ CORE LOOP
  [2 3 3 4 4 1 1 1 1 1 1 1 1 4 4 4 4 4 4 1 1 1 1 4 4]
  [2 2 3 4 4 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1]]
 ```
+![](LegoBricks2DLayout.png)
 
 ## Reference: 
 * https://en.wikipedia.org/wiki/Packing_problems
