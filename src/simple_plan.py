@@ -51,11 +51,7 @@ for p in assembly_list:
         color2 = lego_lib[piece_id]['color']
         ori_two = piece2['ori']
 
-        if ori_one:
-
-
-
-    graph[p].append(p2)
+        if ori_one: graph[p].append(p2)
 
         # FIGURE OUT HOW TO CORRECT ORIENTATION
         # dimension = []
